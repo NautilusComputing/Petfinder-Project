@@ -1,1 +1,6 @@
-
+#cats{
+	width: 100%;
+	height: 700px;
+	transform: rotate(180deg);
+	position: center;
+}
