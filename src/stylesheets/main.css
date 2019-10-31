@@ -4,3 +4,43 @@
 	transform: rotate(180deg);
 	position: center;
 }
+
+/* FOOTER STYLING*/
+#footer{
+	color: white;
+	background-color: #5B30AE;
+	padding-left: 10%;
+	padding-bottom: 3%;
+}
+
+#petfinderFooterLogo{
+	padding-left: 10%;
+	padding-top: 3%;
+	height: 85px;
+	width: 100px;
+}
+
+.bold{
+	font-weight: bold;
+}
+
+.thinText{
+	font-weight: lighter;
+}
+#footerSiteWords h5{
+	padding-bottom: 20px;
+}
+
+#footerSignUpButton{
+	padding: 10px 30px;
+  	border: 2px solid;
+  	color: white;
+  	background-color: #5B30AE;
+  	border-color: white;
+  	border-radius: 100px 100px 100px 100px;
+  	width:200px;
+}
+
+p i{
+	padding: 20px;
+}
