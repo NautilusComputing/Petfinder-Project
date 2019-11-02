@@ -44,3 +44,25 @@
 p i{
 	padding: 20px;
 }
+
+/*Katie's Additions to the CSS*/
+#DogAdoptArticles, #CatAdoptArticles{
+	text-align:center;
+}
+
+#DogAdoptArticles>div, #CatAdoptArticles>div {
+	display:inline-block;
+	*display:inline;
+	float:none;
+}
+
+#DogAdoptArticles>div>img, #CatAdoptArticles>div>img {
+	width:100%;
+	height:auto;
+}
+
+#ArticlesRow{
+	margin: 10px;
+}
+
+/*End Katie's Additions*/
