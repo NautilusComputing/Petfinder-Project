@@ -65,4 +65,18 @@ p i{
 	margin: 10px;
 }
 
+#PetsAvailable{
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+#PetsAvailable>div>div>img{
+	width:100%;
+	max-width: 300px;
+}
+
+#MoreAvailable>div>img{
+	padding: 35px;
+}
+
 /*End Katie's Additions*/
