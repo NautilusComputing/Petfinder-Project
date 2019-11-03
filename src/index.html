@@ -28,14 +28,14 @@
 						<div class="collapse navbar-collapse navbar-exl-collapse">
 							<ul class="nav navbar-nav">
 								<li class="navbar-text"><img src="images/petfinderLogo.png" alt="PetFinder Logo" style="width:128px;"></li>
-								<li class="dropdown">
+								<li class="dropdown-list">
 									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Breeds<b class="caret"></b></a>
 									<ul class="dropdown-menu">
 										<li><a href="#">Dogs</a></li>
 										<li><a href="#">Cats</a></li>                   
 									</ul>
 								</li>
-								<li class="dropdown">
+								<li class="dropdown-list">
 									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Resources<b class="caret"></b></a>
 									<ul class="dropdown-menu">
 										<li><a href="#">About Pet Adoption</a></li>
@@ -71,22 +71,46 @@
 		</div>
 		
 		<div id="adoptionRow" >
-		<div class="container">
-			<nav class="navbar navbar " role="navigation">
-				<div class="collapse navbar-collapse navbar-exl-collapse">
-				<span class="align-middle">
-					<ul class="nav navbar-nav">
-						<li><a href="#">Adopt a Dog</a></li>
-						<li><a href="#">Adopt a Cat</a></li>                 
-					</ul>
-				</span>
-				</div>
-			</nav>
+			<div class="container">
+				<nav class="navbar navbar col-md-6" role="navigation">
+					<div class="collapse navbar-collapse navbar-exl-collapse">
+						<div>
+							<ul class="nav navbar-nav">
+								<li><button id="adoptionButton"><i class="fas fa-dog"></i>Adopt a Dog</button></li>
+								<li><button id="adoptionButton"><i class="fas fa-cat"></i>Adopt a Cat</button></li>                 
+							</ul>
+						</div>
+					</div>
+				</nav>
+			</div>
 		</div>
-	</div>
 	</header>
 
 	<!--MIDDLE SECTION, THE MAIN BULK OF THE PAGE GOES HERE--> 
+	<div class="container" id="guides">
+		<div class="row">
+			<h2>Planning to Adopt a Pet?</h2>
+			<div class="col-md-4">
+				<img src="https://d17fnq9dkz9hgj.cloudfront.net/uploads/2017/08/PCE_Blue_Icon-18.png" alt="Checklist">
+				<h3 id="guideTitle">Checklist for New Adopters</h3>
+				<p>Help make the transition as smooth as possible.</p>
+				<button class="bold" id="learnMore">LEARN MORE</button>
+			</div>
+			<div class="col-md-4">
+				<img src="https://d17fnq9dkz9hgj.cloudfront.net/uploads/2017/08/PCE_Blue_Icon-17.png" alt="Search">
+				<h3 id="guideTitle">Finding the Right Pet</h3>
+				<p>Get tips on figuring out who you should adopt.</p>
+				<button class="bold" id="learnMore">LEARN MORE</button>
+			</div>
+			<div class="col-md-4">
+				<img src="https://d17fnq9dkz9hgj.cloudfront.net/uploads/2017/08/PCE_Blue_Icon-8.png" alt="Checklist">
+				<h3 id="guideTitle">Pet Adoption FAQs</h3>
+				<p>Get answers to questions you haven't thought of.</p>
+				<button class="bold" id="learnMore">LEARN MORE</button>
+			</div>
+		</div>
+	</div>
+	<!--END OF MIDDLE SECTION-->
 
 	<footer id="footer">
 
