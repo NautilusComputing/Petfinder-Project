@@ -44,3 +44,75 @@
 p i{
 	padding: 20px;
 }
+
+/*Katie's Additions to the CSS*/
+#DogAdoptArticles, #CatAdoptArticles{
+	text-align:center;
+}
+
+#DogAdoptArticles>div, #CatAdoptArticles>div {
+	display:inline-block;
+	*display:inline;
+	float:none;
+}
+
+#DogAdoptArticles>div>img, #CatAdoptArticles>div>img {
+	width:100%;
+	height:auto;
+}
+
+#ArticlesRow{
+	margin: 10px;
+}#learnMore{
+	padding: 10px 30px;
+  	border: 2px solid;
+  	color: darkBlue;
+  	background-color: #FFFFFF;
+  	border-color: aquamarine;
+  	border-radius: 100px 100px 100px 100px;
+  	width:200px;
+}
+
+#adoptionRow{
+	padding-left: 35%;
+}
+
+#adoptionButton{
+	color: white;
+	background-color: #5B30AE;
+	border: 1px solid;
+	border-color: white;
+	width: 200px;
+	height: 100px;
+	font-size: 150%;
+}
+
+#guides{
+	text-align: center;
+}
+
+#guideTitle{
+	color: darkBlue;
+}
+
+#PetsAvailable{
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+#PetsAvailable>div>div>img{
+	width:100%;
+	max-width: 300px;
+}
+
+#MoreAvailable>div>img{
+	padding: 35px;
+}
+
+/*End Katie's Additions*/
+
+/*Seth's additions to the CSS*/
+
+
+
+/*End Seth's edits*/
