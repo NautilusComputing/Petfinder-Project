@@ -71,23 +71,121 @@
 		</div>
 		
 		<div id="adoptionRow" >
-		<div class="container">
-			<nav class="navbar navbar " role="navigation">
-				<div class="collapse navbar-collapse navbar-exl-collapse">
-				<span class="align-middle">
-					<ul class="nav navbar-nav">
-						<li><a href="#">Adopt a Dog</a></li>
-						<li><a href="#">Adopt a Cat</a></li>                 
-					</ul>
-				</span>
-				</div>
-			</nav>
+			<div class="container">
+				<nav class="navbar navbar col-md-6" role="navigation">
+					<div class="collapse navbar-collapse navbar-exl-collapse">
+						<div>
+							<ul class="nav navbar-nav">
+								<li><button id="adoptionButton"><i class="fas fa-dog"></i>Adopt a Dog</button></li>
+								<li><button id="adoptionButton"><i class="fas fa-cat"></i>Adopt a Cat</button></li>                 
+							</ul>
+						</div>
+					</div>
+				</nav>
+			</div>
 		</div>
 	</div>
 	</header>
 
 	<!--MIDDLE SECTION, THE MAIN BULK OF THE PAGE GOES HERE--> 
-
+	
+	<!--Pets available ('near you' not implemented here)-->
+	<div id="PetsAvailable" class="row center">
+		<h2 class="text-center">Pets Available for Adoption</h2>
+		<div class="col-md-1"></div>
+		
+		<div  id="Avalible1"  class="col-md-2">
+			<div class="img-thumbnail text-center">
+				<img class="img-responsive" src="images/Reeses.jpg" alt="Reese's Adoption Photo">
+				<div>
+					<h3>Reese's</h3>
+				</div>
+			</div>
+		</div>
+		<div id="Avalible2" class="col-md-2">
+			<div class="img-thumbnail text-center">
+				<img class="img-responsive" src="images/OnyxSquare.jpg" alt="Onyx Adoption Photo">
+				<div>
+					<h3>Onyx</h3>
+				</div>
+			</div>
+		</div>
+		<div id="Avalible3" class="col-md-2">
+			<div class="img-thumbnail text-center">
+				<img class="img-responsive" src="images/DogSquare.jpg" alt="Dog Adoption Photo">
+				<div>
+					<h3>Lilly</h3>
+				</div>
+			</div>
+		</div>
+		<div id="Avalible4" class="col-md-2">
+			<div class="img-thumbnail text-center">
+				<img class="img-responsive" src="images/YellowCat.jpg" alt="Yellow Cat Adoption Photo">
+				<div>
+					<h3>Yellow Cat</h3>
+				</div>
+			</div>
+		</div>
+		<div id="MoreAvailable" class="col-md-2">
+			<div class="img-thumbnail text-center">
+				<img class="img-responsive" src="fontawesome-free-5.11.2-web/svgs/solid/paw.svg" alt="Reese's Adoption Photo">
+				<div>
+					<h3>See More</h3>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-1"></div>
+	</div>
+	
+	<div class="container" id="guides">
+		<div class="row">
+			<h2>Planning to Adopt a Pet?</h2>
+			<div class="col-md-4">
+				<img src="https://d17fnq9dkz9hgj.cloudfront.net/uploads/2017/08/PCE_Blue_Icon-18.png" alt="Checklist">
+				<h3 id="guideTitle">Checklist for New Adopters</h3>
+				<p>Help make the transition as smooth as possible.</p>
+				<button class="bold" id="learnMore">LEARN MORE</button>
+			</div>
+			<div class="col-md-4">
+				<img src="https://d17fnq9dkz9hgj.cloudfront.net/uploads/2017/08/PCE_Blue_Icon-17.png" alt="Search">
+				<h3 id="guideTitle">Finding the Right Pet</h3>
+				<p>Get tips on figuring out who you should adopt.</p>
+				<button class="bold" id="learnMore">LEARN MORE</button>
+			</div>
+			<div class="col-md-4">
+				<img src="https://d17fnq9dkz9hgj.cloudfront.net/uploads/2017/08/PCE_Blue_Icon-8.png" alt="Checklist">
+				<h3 id="guideTitle">Pet Adoption FAQs</h3>
+				<p>Get answers to questions you haven't thought of.</p>
+				<button class="bold" id="learnMore">LEARN MORE</button>
+			</div>
+		</div>
+	</div>
+	
+	<!--Thumbnails for dog and cat adoption articles-->
+	<div id="ArticlesRow" class="row center">
+		<div id="DogAdoptArticles" class="col-md-6">
+			<div class="img-thumbnail text-center">
+				<img src="images/Baxter.jpg" alt="Dog Adoption Articles Photo">
+				<div>
+					<h4>Dog Adoption Articles</h4>
+					<p>Learn more about caring for your new dog.</p>
+					<button class="btn btn-default" type="button">Read More</button>
+				</div>
+			</div>
+		</div>
+		<div id="CatAdoptArticles" class="col-md-6">
+			<div class="img-thumbnail text-center">
+				<img src="images/OrangeKitten.jpg" alt="Cat Adoption Articles Photo">
+				<div>
+					<h4>Cat Adoption Articles</h4>
+					<p>Helpful insights on what to expect.</p>
+					<button class="btn btn-default" type="button">Read More</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--End Middle Section-->
+	
 	<footer id="footer">
 
 		<div class="row">
