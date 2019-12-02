@@ -3,9 +3,10 @@
 <head>
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Petfinder</title>
+	<title>Dog Adoption | Petfinder</title>
 	
 	<link href="stylesheets/main.css" rel="stylesheet">
+	<link href="stylesheets/dog-adoption.css" rel="stylesheet">
 	<link href="bootstrap-3.0.0/dist/css/bootstrap.css" rel="stylesheet">
 
 	<!-- <script src="https://use.fontawesome.com/ade8605918.js"></script> -->
@@ -27,7 +28,7 @@
 						</div>
 						<div class="collapse navbar-collapse navbar-exl-collapse">
 							<ul class="nav navbar-nav">
-								<li class="navbar-text"><img src="images/petfinderLogo.png" alt="PetFinder Logo" style="width:128px;"></li>
+								<li class="navbar-text"><a href="index.html"><img src="images/petfinderLogo.png" alt="PetFinder Logo" style="width:128px;"></a></li>
 								<li class="dropdown">
 									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Breeds<b class="caret"></b></a>
 									<ul class="dropdown-menu">
@@ -65,130 +66,67 @@
 				</div>
 			</div>
 		</div>
-		
-		<div id="pictureRow">
-			<img src="images/OnyxAndLacey.jpg" id="cats" alt="Cats">
-		</div>
-		
-		<div id="adoptionRow" >
-			<div class="container">
-				<nav class="navbar navbar col-md-6" role="navigation">
-					<div class="collapse navbar-collapse navbar-exl-collapse">
-						<div>
-							<ul class="nav navbar-nav">
-								<li><button id="adoptionButton"><i class="fas fa-dog"></i>Adopt a Dog</button></li>
-								<li><button id="adoptionButton"><i class="fas fa-cat"></i>Adopt a Cat</button></li>                 
-							</ul>
-						</div>
-					</div>
-				</nav>
-			</div>
-		</div>
-	</div>
-	</header>
 
-	<!--MIDDLE SECTION, THE MAIN BULK OF THE PAGE GOES HERE--> 
-	
-	<!--Pets available ('near you' not implemented here)-->
-	<div id="PetsAvailable" class="row center">
-		<h2 class="text-center">Pets Available for Adoption</h2>
-		<div class="col-md-1"></div>
-		
-		<div  id="Avalible1"  class="col-md-2">
-			<div class="img-thumbnail text-center">
-				<img class="img-responsive" src="images/Reeses.jpg" alt="Reese's Adoption Photo">
-				<div>
-					<h3>Reese's</h3>
-				</div>
-			</div>
-		</div>
-		<div id="Avalible2" class="col-md-2">
-			<div class="img-thumbnail text-center">
-				<img class="img-responsive" src="images/OnyxSquare.jpg" alt="Onyx Adoption Photo">
-				<div>
-					<h3>Onyx</h3>
-				</div>
-			</div>
-		</div>
-		<div id="Avalible3" class="col-md-2">
-			<div class="img-thumbnail text-center">
-				<img class="img-responsive" src="images/DogSquare.jpg" alt="Dog Adoption Photo">
-				<div>
-					<h3>Lilly</h3>
-				</div>
-			</div>
-		</div>
-		<div id="Avalible4" class="col-md-2">
-			<div class="img-thumbnail text-center">
-				<img class="img-responsive" src="images/YellowCat.jpg" alt="Yellow Cat Adoption Photo">
-				<div>
-					<h3>Yellow Cat</h3>
-				</div>
-			</div>
-		</div>
-		<div id="MoreAvailable" class="col-md-2">
-			<div class="img-thumbnail text-center">
-				<img class="img-responsive" src="fontawesome-free-5.11.2-web/svgs/solid/paw.svg" alt="Reese's Adoption Photo">
-				<div>
-					<h3>See More</h3>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-1"></div>
-	</div>
-	
-	<div class="container" id="guides">
+	<div class="container">
 		<div class="row">
-			<h2>Planning to Adopt a Pet?</h2>
-			<div class="col-md-4">
-				<img src="https://d17fnq9dkz9hgj.cloudfront.net/uploads/2017/08/PCE_Blue_Icon-18.png" alt="Checklist">
-				<h3 id="guideTitle">Checklist for New Adopters</h3>
-				<p>Help make the transition as smooth as possible.</p>
-				<button class="bold" id="learnMore">LEARN MORE</button>
-			</div>
-			<div class="col-md-4">
-				<img src="https://d17fnq9dkz9hgj.cloudfront.net/uploads/2017/08/PCE_Blue_Icon-17.png" alt="Search">
-				<h3 id="guideTitle">Finding the Right Pet</h3>
-				<p>Get tips on figuring out who you should adopt.</p>
-				<button class="bold" id="learnMore">LEARN MORE</button>
-			</div>
-			<div class="col-md-4">
-				<img src="https://d17fnq9dkz9hgj.cloudfront.net/uploads/2017/08/PCE_Blue_Icon-8.png" alt="Checklist">
-				<h3 id="guideTitle">Pet Adoption FAQs</h3>
-				<p>Get answers to questions you haven't thought of.</p>
-				<button class="bold" id="learnMore">LEARN MORE</button>
-			</div>
-		</div>
-	</div>
-	
-	<!--Thumbnails for dog and cat adoption articles-->
-	<div id="ArticlesRow" class="row center">
-		<div id="DogAdoptArticles" class="col-md-6">
-			<div class="img-thumbnail text-center">
-				<img src="images/Baxter.jpg" alt="Dog Adoption Articles Photo">
-				<div>
-					<h4>Dog Adoption Articles</h4>
-					<p>Learn more about caring for your new dog.</p>
-					<button class="button" type="button"><a href ="dog-adoption.html">Read More</a></button>
-				</div>
-			</div>
-		</div>
-		<div id="CatAdoptArticles" class="col-md-6">
-			<div class="img-thumbnail text-center">
-				<img src="images/OrangeKitten.jpg" alt="Cat Adoption Articles Photo">
-				<div>
-					<h4>Cat Adoption Articles</h4>
-					<p>Helpful insights on what to expect.</p>
-					<button class="btn btn-default" type="button">Read More</button>
-					
-				</div>
-			</div>
-		</div>
-	</div>
-	<!--End Middle Section-->
-	
-	<footer id="footer">
+			<p><a href="index.html">Home</a></p>
+    		<h1>Dog Adoption</h1>
+		    <div class="col-md-4" id="articleHeader">
+			    	<img src="images/dalmation.jpg" style="height:250px; width:325px;">
+			    	<h3><a href="adoption-article.html">Why Are Dogs Given Up?</a></h3>
+			    	<p>Find out the most common reasons for pet relinquishment.<br>The truth may surprise you!</p>
+		    </div>
 
+	    	<div class="col-md-4" id="articleHeader">
+		    	<img src="images/peanut.jpg" style="height:250px; width:325px;">
+		    	<h3><a href="#">First 30 Days With A New Dog</a></h3>
+		    	<p>The first month is the most important to bond with a<br> new dog. Learn what to expect.</p>
+			</div> 
+	  	</div>
+	  	<hr>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<div class="articlePreview">
+					<img class="pull-left" src="images/adoptMe.jpg" style="height:200px; width:200px;">
+					<h3><a href="#">Dog Adoption</a></h3>
+					<h2><a href="#">Doug Rehoming</a></h2>
+					<p>by Petfinder<p>
+					<br>
+					<p>   Reading time: 6 mins, 34 sec.   Dog rehoming, in the first place, is not abandonment; as a matter of fact, it’s humane, mature, and responsible. Secondly, while there are various problems which can potentially cause pet parents to consider rehoming their pet, comparatively there are also solutions.   Dog Rehoming Issue and Solution Board   I got a …<a href="#">Read More</a></p>
+					<br>
+					<hr>
+				</div>
+
+				<div class="articlePreview">
+					<img class="pull-left" src="images/militaryDog.jpg" style="height:200px; width:200px;">
+					<h3><a href="#">Dog Adoption</a></h3>
+					<h2><a href="#">Military Dog Adoption</a></h2>
+					<p>by Petfinder<p>
+					<br>
+					<p>    Reading Time: 3 mins, 38 secs.   Military dog adoption uniquely allows civilians to rehome military working dogs. Military working dogs are also known as, MWD. In brief, these dogs are especially unique as they’re retired from serving. Notably retired from duty, military working dogs are now on a special mission, by all means, to find a forever home. To …<a href="#">Read More</a></p>
+					<br>
+					<hr>
+				</div>
+
+				<div class="articlePreview">
+					<img class="pull-left" src="images/sittingDownDog.jpg" style="height:200px; width:200px;">
+					<h3><a href="#">Dog Adoption</a></h3>
+					<h2><a href="#">Dogs with Different Colored Eyes Are Twice as Nice!</a></h2>
+					<p>by Petfinder<p>
+					<br>
+					<p>    Have you ever seen dogs with two different colored eyes? Stunning! But why does this happen? Find out everything you ever wanted to know about heterochromia.   The next time you come across a dog with two different colored eyes, don’t stop to clean your glasses or rub your eyes. You’re not seeing things — you’ve simply found a dog …<a href="#">Read More</a></p>
+					<br>
+					<hr>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<footer id="footer">
 		<div class="row">
 			<div class="col-md-2">
 				<p><a href="#"><img id="petfinderFooterLogo" src="images/petfinderFooterLogo.png" alt="PetFinder White Text Logo"></a></p>
@@ -257,7 +195,6 @@
         		<i class="fab fa-youtube"></i> <i class="fab fa-pinterest-p"></i></p>
         	</div>
         </div>
-
 	</footer>
 </body>
 </html>
