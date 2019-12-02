@@ -1,0 +1,13 @@
+$query = "INSERT INTO $tableName VALUES('0004', 'Reeses', 'cat', 'domestic shorthair', 'adult', 'medium', 'female', 'cats', 'medium', 'house-trained')";
+
+$query = "INSERT INTO $tableName VALUES('0005', 'Yellow Cat', 'cat', 'domestic shorthair', 'senior', 'large', 'male', 'kids', 'short', 'indoor/outdoor')";
+
+$query = "INSERT INTO $tableName VALUES('0006', 'Missy', 'cat', 'domestic shorthair', 'senior', 'medium', 'female', 'cats', 'short', 'medication')";
+
+$query = "INSERT INTO $tableName VALUES('0007', 'Munchkin', 'cat', 'domestic shorthair', 'adult', 'medium', 'female', 'kids', 'medium', 'house-trained')";
+
+$query = "INSERT INTO $tableName VALUES('0008', 'Holly', 'cat', 'domestic longhair', 'young adult', 'large', 'female', 'cats', 'long', 'house-trained')";
+
+$query = "INSERT INTO $tableName VALUES('0009', 'Shadow', 'cat', 'domestic shorthair', 'eight months', 'small', 'male', 'cats', 'medium', 'house-trained')";
+
+$query = "INSERT INTO $tableName VALUES('0010', 'Spirit', 'cat', 'domestic shorthair', 'eight months', 'small', 'female', 'cats', 'short', 'special diet')";
