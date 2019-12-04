@@ -26,6 +26,21 @@ else
 
 <!DOCTYPE html>
 <html lang="en">
+<script type="text/javascript" language="javascript">
+	window.onload = function() {
+		document.getElementById("footerSignUpButton").onmouseover = function()
+		{
+			this.style.backgroundColor = "#FFFFFF";
+			this.style.color = "#5B30AE";
+		}
+		
+		document.getElementById("footerSignUpButton").onmouseout = function()
+		{
+			this.style.backgroundColor = "#5B30AE";
+			this.style.color = "#FFFFFF";
+		}
+	}
+</script>
 <head>
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
