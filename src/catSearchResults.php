@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Search Results | Cat</title>
+	
+	<link href="stylesheets/search.css" rel="stylesheet">
+	<link href="stylesheets/main.css" rel="stylesheet">
+	<link href="bootstrap-3.0.0/dist/css/bootstrap.css" rel="stylesheet">
+
+	<!-- <script src="https://use.fontawesome.com/ade8605918.js"></script> -->
+	<link href="fontawesome-free-5.11.2-web/css/all.css" rel="stylesheet">
+</head>
+<?php
+	$serverName = "itkmssql";
+    $connectionOptions = array(
+	//*****************************
+        "Database" => "PetfinderDatabase",
+        "Uid" => "IT353F904",
+        "PWD" => "bell35"
+    );
+	
+	//Establishes the connection
+    $conn = sqlsrv_connect($serverName, $connectionOptions);
+?>
+<body>
+	<header>
+		<div id="topHeaderRow" >
+			<div class="container">
+				<div class="row">
+					<nav class="navbar navbar " role="navigation">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+								<span class="sr-only">Toggle Navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+						</div>
+						<div class="collapse navbar-collapse navbar-exl-collapse">
+							<ul class="nav navbar-nav">
+								<li class="navbar-text"><a href="index.html"><a href="index.html"><img src="images/petfinderLogo.png" alt="PetFinder Logo" style="width:128px;"></a></li>
+								<li class="dropdown-list">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Breeds <b class="caret"></b></a>
+									<ul class="dropdown-menu">
+										<li><a href="#">Dogs</a></li>
+										<li><a href="#">Cats</a></li>                   
+									</ul>
+								</li>
+								<li class="dropdown-list">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Resources <b class="caret"></b></a>
+									<ul class="dropdown-menu">
+										<li><a href="#" class="dropdown-item">About Pet Adoption</a></li>
+										<li><a href="#" class="dropdown-item">Dog Care</a></li>
+										<li><a href="#" class="dropdown-item">Cat Care</a></li>
+										<li><a href="#" class="dropdown-item">All Pet Care</a></li>
+										<li><a href="#" class="dropdown-item">Helping Pets</a></li>
+										<li><a href="#" class="dropdown-item">Videos</a></li>
+									</ul>
+								</li>
+								<div class="col-md-4 pull-right">
+								<li>
+									<form class="form-inline" role="search">
+										<div class="input-group">
+											<label class="sr-only">Search</label>
+											<input type="text" class="form-control" placeholder="Search" name="search" width="256px">
+											<span class="input-group-btn">
+												<button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+											</span>
+										</div>
+									</form>
+								</li>
+								</div>
+							</ul>
+						</div>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="container" id="filter">
+		<div class="row">
+			<div class="col-md-2 pull-left">
+				<div class="dropdown">
+					<button class="btn dropdown-toggle" type="button" id="dropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Breeds
+					</button>
+					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+						<a class="dropdown-item" href="#">Any</a>
+					</div>
+				</div>
+				<div class="dropdown">
+					<button class="btn dropdown-toggle" type="button" id="dropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Age
+					</button>
+					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+						<a class="dropdown-item" href="#">Any</a>
+						<a class="dropdown-item" href="#">Puppy</a>
+						<a class="dropdown-item" href="#">Young</a>
+						<a class="dropdown-item" href="#">Adult</a>
+						<a class="dropdown-item" href="#">Senior</a>
+					</div>
+				</div>
+				<div class="dropdown">
+					<button class="btn dropdown-toggle" type="button" id="dropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Size
+					</button>
+					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+						<a class="dropdown-item" href="#">Any</a>
+						<a class="dropdown-item" href="#">Small</a>
+						<a class="dropdown-item" href="#">Medium</a>
+						<a class="dropdown-item" href="#">Large</a>
+						<a class="dropdown-item" href="#">XL</a>
+					</div>
+				</div>
+				<div class="dropdown">
+					<button class="btn dropdown-toggle" type="button" id="dropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Gender
+					</button>
+					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+						<a class="dropdown-item" href="#">Any</a>
+						<a class="dropdown-item" href="#">Male</a>
+						<a class="dropdown-item" href="#">Female</a>
+					</div>
+				</div>
+				<div class="dropdown">
+					<button class="btn dropdown-toggle" type="button" id="dropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Good With
+					</button>
+					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+						<a class="dropdown-item" href="#">Any</a>
+						<a class="dropdown-item" href="#">Kids</a>
+						<a class="dropdown-item" href="#">Other Dogs</a>
+						<a class="dropdown-item" href="#">Cats</a>
+					</div>
+				</div>
+				<div class="dropdown">
+					<button class="btn dropdown-toggle" type="button" id="dropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Coat Length
+					</button>
+					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+						<a class="dropdown-item" href="#">Any</a>
+						<a class="dropdown-item" href="#">Hairless</a>
+						<a class="dropdown-item" href="#">Short</a>
+						<a class="dropdown-item" href="#">Medium</a>
+						<a class="dropdown-item" href="#">Long</a>
+						<a class="dropdown-item" href="#">Wire</a>
+						<a class="dropdown-item" href="#">Curly</a>
+					</div>
+				</div>
+				<div class="dropdown">
+					<button class="btn dropdown-toggle" type="button" id="dropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Color
+					</button>
+					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+						<a class="dropdown-item" href="#">Any</a>
+					</div>
+				</div>
+				<div class="dropdown">
+					<button class="btn dropdown-toggle" type="button" id="dropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Care and Behavior
+					</button>
+					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+						<a class="dropdown-item" href="#">Any</a>
+						<a class="dropdown-item" href="#">House-Trained</a>
+						<a class="dropdown-item" href="#">Special Needs</a>
+					</div>
+				</div>
+				<div class="dropdown">
+					<button class="btn dropdown-toggle" type="button" id="dropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Days on Petfinder
+					</button>
+					
+					
+					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+					
+						<a class="dropdown-item" href="#">Any</a>
+						<a class="dropdown-item" href="#">1</a>
+						<a class="dropdown-item" href="#">7</a>
+						<a class="dropdown-item" href="#">14</a>
+						<a class="dropdown-item" href="#">30+</a>
+					</div>
+				
+				</div>
+			</div>
+			<div class="col-md-10" id="petList">
+				<div  id="Avalible1"  class="col-md-2">
+					<div class="img-thumbnail text-center">
+						<img class="img-responsive" src="images/Lacey Laying Down.jpg" alt="Lacy's Adoption Photo">
+						<div>
+							<h3>
+							<?php
+								$query = "SELECT petName FROM petTable WHERE petSpecies = 'Cat' AND petID = '0002'";
+								$result = sqlsrv_query($conn, $query);
+								while($row = sqlsrv_fetch_array($result, SQLSRV_FETCH_ASSOC))
+								{
+									echo $row['petName'];	
+								}
+							?>
+							</h3>
+						</div>
+					</div>
+				</div>
+				
+				<div  id="Avalible1"  class="col-md-2">
+					<div class="img-thumbnail text-center">
+						<img class="img-responsive" src="images/OnyxSquare.jpg" alt="Onyx's Adoption Photo">
+						<div>
+							<h3>
+							<?php
+								$query = "SELECT petName FROM petTable WHERE petSpecies = 'Cat' AND petID = '0003'";
+								$result = sqlsrv_query($conn, $query);
+								while($row = sqlsrv_fetch_array($result, SQLSRV_FETCH_ASSOC))
+								{
+									echo $row['petName'];	
+								}
+							?>
+							</h3>
+						</div>
+					</div>
+				</div>
+				
+				<div  id="Avalible1"  class="col-md-2">
+					<div class="img-thumbnail text-center">
+						<a href="PetPage.html"><img class="img-responsive" src="images/Holly.jpg" alt="Holly's Adoption Photo"></a>
+						<div>
+							<h3>
+							<?php
+								$query = "SELECT petName FROM petTable WHERE petSpecies = 'Cat' AND petID = '0008'";
+								$result = sqlsrv_query($conn, $query);
+								while($row = sqlsrv_fetch_array($result, SQLSRV_FETCH_ASSOC))
+								{
+									echo $row['petName'];	
+								}
+							?>
+							</h3>
+						</div>
+					</div>
+				</div>
+				
+					<div  id="Avalible1"  class="col-md-2">
+					<div class="img-thumbnail text-center">
+						<img class="img-responsive" src="images/Spirit.jpg" alt="Spirit's Adoption Photo">
+						<div>
+							<h3>
+							<?php
+								$query = "SELECT petName FROM petTable WHERE petSpecies = 'Cat' AND petID = '0010'";
+								$result = sqlsrv_query($conn, $query);
+								while($row = sqlsrv_fetch_array($result, SQLSRV_FETCH_ASSOC))
+								{
+									echo $row['petName'];	
+								}
+							?>
+							</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer id="footer">
+
+		<div class="row">
+			<div class="col-md-2">
+				<p><a href="#"><img id="petfinderFooterLogo" src="images/petfinderFooterLogo.png" alt="PetFinder White Text Logo"></a></p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-2">
+	            <h5 class="bold">ABOUT PETFINDER</h5>
+	            <ul class="list-unstyled text-small">
+	              <li><a class="text-muted" href="#">About Petfinder</a></li>
+	              <li><a class="text-muted" href="#">FAQs</a></li>
+	              <li><a class="text-muted" href="#">Partnerships</a></li>
+	              <li><a class="text-muted" href="#">Terms of Service</a></li>
+	              <li><a class="text-muted" href="#">Mobile Site & Apps</a></li>
+	              <li><a class="text-muted" href="#">Petfinder Foundation</a></li>
+	              <li><a class="text-muted" href="#">Free Wdgets & Graphics</a></li>
+	              <li><a class="text-muted" href="#">Pres</a></li>
+	              <li><a class="text-muted" href="#">For Devlopers</a></li>
+	              <li><a class="text-muted" href="#">Contact Us</a></li>
+	            </ul>
+          	</div>
+          	<div class="col-md-2">
+	            <h5 class="bold">PET ADOPTION</h5>
+	            <ul class="list-unstyled text-small">
+	              <li><a class="text-muted" href="#">Dog Adoption</a></li>
+	              <li><a class="text-muted" href="#">Cat Adoption</a></li>
+	              <li><a class="text-muted" href="#">Other Pet Adoption</a></li>
+	              <li><a class="text-muted" href="#">Search Adoption Organizations</a></li>
+	              <li><a class="text-muted" href="#">Pet-Adoption Stories</a></li>
+	              <li><a class="text-muted" href="#">Local Adoption Events</a></li>
+	              <li><a class="text-muted" href="#">Shelters & Resources</a></li>
+	            </ul>
+          	</div> 	
+          	<div class="col-md-2">
+	            <h5 class="bold">PET CARE TOPICS</h5>
+	            <ul class="list-unstyled text-small">
+	              <li><a class="text-muted" href="#">Dog Care</a></li>
+	              <li><a class="text-muted" href="#">Dog Breeds</a></li>
+	              <li><a class="text-muted" href="#">Cat Care</a></li>
+	              <li><a class="text-muted" href="#">Cat Breeds</a></li>
+	              <li><a class="text-muted" href="#">All Pet Care</a></li>
+	              <li><a class="text-muted" href="#">Pet Care Videos</a></li>
+	              <li><a class="text-muted" href="#">Helping Pets</a></li>
+	            </ul>
+          	</div>
+
+          	<div class="col-md-2" id="footerSiteWords">
+          		 <h5 class="bold">SITEMAP</h5>
+          		 <h5 class="bold">PRIVACY POLICY</h5>
+          		 <h5 class="bold">ABOUT OUR ADS</h5>
+				 <h5 class="bold">SHELTER & RESCUE LOGIN</h5>
+				 <h5 class="bold">SHELTER & RESCUE REGISTRATION</h5>	
+          	</div>
+
+          	<div class="col-md-2">
+          		<p class="text-muted">To get the latest on ped adoption and pet care, sign up for the Petfinder newsletter.</p>
+          		<button class="bold" id="footerSignUpButton">SIGN UP</button>
+          	</div>
+        </div>
+        
+        <div class="row" id="footerBottom">
+        	<div class=".col-12 .col-md-8">
+        		<p class="thinText">&#169;2019 Petfinder.com  All trademarks are owned by Soci&eacute;t&eacute;des Produits Nesti&eacute; S.A.,
+        		or used with permission. <i class="fab fa-facebook-f"></i> <i class="fab fa-twitter"></i> <i class="fab fa-instagram"></i> 
+        		<i class="fab fa-youtube"></i> <i class="fab fa-pinterest-p"></i></p>
+        	</div>
+        </div>
+
+	</footer>
+</body>
+</html>
